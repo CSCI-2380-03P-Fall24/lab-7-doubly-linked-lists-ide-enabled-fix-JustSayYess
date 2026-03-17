@@ -131,7 +131,7 @@ void StudentList::insertStudent(Student s, int index) {
 Student StudentList::retrieveStudent(int idNum) {
 	Node* current = head;
 	while(current != nullptr){
-		if(current->data.id() == idNum){
+		if(current->data.id == idNum){
 			return current->data;
 		}
 		current = current->next;
@@ -147,7 +147,7 @@ void StudentList::removeStudentById(int idNum) {
 	Node* current = head;
 
 	while(current != nullptr){
-		if(current->data.id() == idNum){
+		if(current->data.id == idNum){
 			if(current == head){
 				popFront();
 				return;
