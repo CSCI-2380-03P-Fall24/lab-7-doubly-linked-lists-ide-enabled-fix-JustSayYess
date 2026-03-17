@@ -193,7 +193,7 @@ and otherList should be empty and have zero students.
 void StudentList::mergeList(StudentList &otherList) {
 	if(otherList.head == nullptr){
 		return;
-}
+	}
 	if(head == nullptr){
 		head = otherList.head;
 		tail = otherList.tail;
@@ -265,6 +265,9 @@ while(current != nullptr){
 
 		delete current;
 		numStudents --;
-	}
+		}
 	current = nextNode;
+	}
+
+	
 }
